@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class CallBackTest {
 
     @BeforeEach
     public void setUp() {
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(new ChromeOptions().addArguments("-headless"));
     }
 
     @AfterEach
