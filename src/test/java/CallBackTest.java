@@ -34,7 +34,7 @@ class CallBackTest {
     public void shouldSendForm() {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Виктор Афиногенов");
-        driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79180000001");
+        driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79180000002");
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button__text")).click();
         String actualText = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText().trim();
